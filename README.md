@@ -1,3 +1,3 @@
 ## Hover effect (mouseover, mouseout)
 
-![Hover effect](./hover.svg)
+<img src="hover.svg" width="200" height="200" alt="Hover effect">
