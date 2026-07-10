@@ -10,6 +10,10 @@
 
 <img src="SVGs/3d-buggy.svg" width="200" height="200" alt="3D rotation">
 
+## Vertical carousel with bugfix opacity
+
+<img src="SVGs/carousel.svg" width="400" height="300" alt="Vertical carousel">
+
 ## Hover effect (CSS)
 
 <img src="SVGs/hover-css.svg" width="200" height="200" alt="Hover effect">
