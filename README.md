@@ -14,6 +14,10 @@
 
 <img src="SVGs/carousel.svg" width="400" height="300" alt="Vertical carousel">
 
+## Double carousel
+
+<img src="SVGs/double-carousel.svg" width="846" height="180" alt="Double carousel">
+
 ## Hover effect (CSS)
 
 <img src="SVGs/hover-css.svg" width="200" height="200" alt="Hover effect">

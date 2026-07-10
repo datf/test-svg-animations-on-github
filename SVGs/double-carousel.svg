@@ -1,0 +1,117 @@
+<svg width="846" height="180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 846 180">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        :root {
+          --text-color: white;
+          --left-grad-start: #e94560;
+          --left-grad-end: #b21f66;
+          --right-grad-start: #16213e;
+          --right-grad-end: #0f3460;
+          --shadow-color: rgba(0,0,0,0.4);
+          --animation-duration: 10s;
+          --cards: 5;
+        }
+
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        .scene {
+          width: 846px;
+          height: 180px;
+          perspective: 2200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          padding: 0 60px;
+          font-family: sans-serif;
+          background: none;
+        }
+
+        .carousel {
+          height: 120px;
+          display: grid;
+          transform-style: preserve-3d;
+        }
+
+        .carousel.right {
+          flex: 1;
+        }
+
+        .card {
+          grid-area: 1 / 1;
+          width: 100%;
+          height: 100%;
+          border-radius: 15px;
+          color: var(--text-color);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          backface-visibility: hidden;
+          box-shadow: 0 10px 20px var(--shadow-color);
+        }
+
+        .carousel.left .card {
+          background: linear-gradient(135deg, var(--left-grad-start), var(--left-grad-end));
+          font-size: 3.5rem;
+          padding: 0 30px;
+          animation: revolve-up var(--animation-duration) infinite cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .carousel.right .card {
+          background: linear-gradient(135deg, var(--right-grad-start), var(--right-grad-end));
+          font-size: 1.4rem;
+          padding: 0 20px;
+          text-align: center;
+          animation: revolve-down var(--animation-duration) infinite cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .left .card:nth-child(1), .right .card:nth-child(1) { animation-delay: calc((var(--animation-duration) / var(--cards)) * 0); }
+        .left .card:nth-child(5), .right .card:nth-child(5) { animation-delay: calc((var(--animation-duration) / var(--cards)) * -1); }
+        .left .card:nth-child(4), .right .card:nth-child(4) { animation-delay: calc((var(--animation-duration) / var(--cards)) * -2); }
+        .left .card:nth-child(3), .right .card:nth-child(3) { animation-delay: calc((var(--animation-duration) / var(--cards)) * -3); }
+        .left .card:nth-child(2), .right .card:nth-child(2) { animation-delay: calc((var(--animation-duration) / var(--cards)) * -4); }
+
+        @keyframes revolve-up {
+           0.00%, 13.33% { transform: rotateX(0deg)    translateZ(200px); opacity: 1; }
+          20.00%, 33.33% { transform: rotateX(-72deg)  translateZ(200px); opacity: 1; }
+          40.00%, 53.33% { transform: rotateX(-144deg) translateZ(200px); opacity: 0; }
+          60.00%, 73.33% { transform: rotateX(-216deg) translateZ(200px); opacity: 0; }
+          80.00%, 93.33% { transform: rotateX(-288deg) translateZ(200px); opacity: 1; }
+          100%           { transform: rotateX(-360deg) translateZ(200px); opacity: 1; }
+        }
+
+        @keyframes revolve-down {
+           0.00%, 13.33% { transform: rotateX(0deg)    translateZ(200px); opacity: 1; }
+          20.00%, 33.33% { transform: rotateX(72deg)   translateZ(200px); opacity: 1; }
+          40.00%, 53.33% { transform: rotateX(144deg)  translateZ(200px); opacity: 0; }
+          60.00%, 73.33% { transform: rotateX(216deg)  translateZ(200px); opacity: 0; }
+          80.00%, 93.33% { transform: rotateX(288deg)  translateZ(200px); opacity: 1; }
+          100%           { transform: rotateX(360deg)  translateZ(200px); opacity: 1; }
+        }
+      </style>
+
+      <div class="scene">
+        <div class="carousel left">
+          <div class="card">01</div>
+          <div class="card">02</div>
+          <div class="card">03</div>
+          <div class="card">04</div>
+          <div class="card">5</div>
+        </div>
+        <div class="carousel right">
+          <div class="card">First card is always first</div>
+          <div class="card">Second should always come after the first card</div>
+          <div class="card">Third should be number three on both sides</div>
+          <div class="card">Fourth card should be before the last card</div>
+          <div class="card">Fifth card should have the right opacity when rolling over</div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
