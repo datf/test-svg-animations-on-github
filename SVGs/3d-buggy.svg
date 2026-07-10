@@ -1,0 +1,47 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+      .scene {
+        width: 200px;
+        height: 200px;
+        perspective: 600px;
+      }
+      .cube {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: verticalCarousel 6s infinite ease-in-out;
+      }
+      .vcard {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+      } 
+      .vcard--one {
+        background: red;
+        transform: rotateY(0deg) translateZ(100px);
+      }
+      .vcard--two {
+        background: rgba(0,0,255,1);
+        transform: rotateY(180deg) translateZ(100px);
+      }
+      @keyframes verticalCarousel {
+        0%, 100% {
+          transform: translateZ(-100px) rotateY(   0deg);
+        }
+        50% {
+          transform: translateZ(-100px) rotateY(-180deg);
+        }
+      }
+      </style>
+      <div class="scene scene--card">
+        <div class="cube">
+          <div class="vcard vcard--one">front</div>
+          <div class="vcard vcard--two">back</div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

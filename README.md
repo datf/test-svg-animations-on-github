@@ -1,10 +1,14 @@
-# Pulse
+## Pulse
 
 <img src="SVGs/pulse.svg" width="200" height="200" alt="Pulse">
 
-# Flip
+## Flip
 
 <img src="SVGs/flip.svg" width="200" height="200" alt="Flip">
+
+## 3D rotation (buggy when in img tag)
+
+<img src="SVGs/3d-buggy.svg" width="200" height="200" alt="3D rotation">
 
 ## Hover effect (CSS)
 
