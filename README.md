@@ -2,6 +2,10 @@
 
 <img src="SVGs/pulse.svg" width="200" height="200" alt="Pulse">
 
+# Flip
+
+<img src="SVGs/flip.svg" width="200" height="200" alt="Flip">
+
 ## Hover effect (CSS)
 
 <img src="SVGs/hover-css.svg" width="200" height="200" alt="Hover effect">

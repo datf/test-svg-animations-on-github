@@ -1,0 +1,95 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .scene {
+          width: 200px;
+          height: 260px;
+          border: 1px solid #CCC;
+          margin: 40px 0;
+          perspective: 600px;
+        }
+
+        .card {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          transform-style: preserve-3d;
+        }
+
+        .card__face {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          line-height: 260px;
+          color: white;
+          text-align: center;
+          font-weight: bold;
+          font-size: 40px;
+          backface-visibility: hidden;
+        }
+        .card__face--front {
+          background: red;
+          transform: rotateY(0deg);
+        }
+
+        .card__face--back {
+          background: rgba(.5,.5,.9,.5);
+          transform: rotateY(180deg);
+        }
+
+        .card {
+          transform-origin: 100px 130px;
+          animation: flipCard 3s infinite ease-in-out;
+        }
+
+        .card__face--back {
+          transform-origin: 100px 130px;
+          transform: scaleX(-1);
+        }
+
+        @keyframes flipCard {
+          0%, 15% {
+            transform: scaleX(1);
+          }
+
+          30% {
+            transform: scaleX(0);
+          }
+
+          45%, 65% {
+            transform: scaleX(-1);
+          }
+
+          80% {
+            transform: scaleX(0);
+          }
+
+          95%, 100% {
+            transform: scaleX(1);
+          }
+        }
+
+        .card__face--front { animation: hideFront 3s infinite steps(1); }
+        .card__face--back  { animation: showBack 3s infinite steps(1); }
+
+        @keyframes hideFront {
+          0%, 30%, 80%, 100% { opacity: 1; visibility: visible; }
+          31%, 79% { opacity: 0; visibility: hidden; }
+        }
+
+        @keyframes showBack {
+          0%, 30%, 80%, 100% { opacity: 0; visibility: hidden; }
+          31%, 79% { opacity: 1; visibility: visible; }
+        }
+      </style>
+      <div class="scene scene--card">
+        <div class="card">
+          <div class="card__face card__face--front">front</div>
+          <div class="card__face card__face--back">back</div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
