@@ -18,6 +18,10 @@
 
 <img src="SVGs/double-carousel.svg" width="846" height="180" alt="Double carousel">
 
+## Slot machine
+
+<img src="SVGs/slot-machine.svg" width="800" height="200" alt="Slot machine">
+
 ## Hover effect (CSS)
 
 <img src="SVGs/hover-css.svg" width="200" height="200" alt="Hover effect">
